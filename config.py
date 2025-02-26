@@ -1,5 +1,5 @@
 import os
-is_proxy = True
+is_proxy = False
 moonshot_api_key = "sk-xxx"
 siliconflow_api_key = "sk-xxx"
 if is_proxy:
