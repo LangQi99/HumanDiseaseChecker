@@ -1,0 +1,658 @@
+<html
+    data-build="prod-55b43ca1dad020edb2569d0edc73700b7a4369aa"
+    dir="ltr"
+    class=""
+>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://cdn.oaistatic.com" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="apple-itunes-app" content="app-id=6448311069" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="https://cdn.oaistatic.com/assets/apple-touch-icon-mz9nytnj.webp"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="https://cdn.oaistatic.com/assets/favicon-32x32-p4ktpm1x.webp"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="https://cdn.oaistatic.com/assets/favicon-dark-32x32-gt5kfzyp.webp"
+            media="(prefers-color-scheme: dark)"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            sizes="32x32"
+            href="https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg"
+        />
+        <title>人类疾病帮手</title>
+
+        <meta property="og:title" content="人类疾病帮手" />
+        <meta
+            property="og:image"
+            content="https://cdn.oaistatic.com/assets/chatgpt-share-og-u7j5uyao.webp"
+        />
+        <!-- <meta property="og:url" content="https://人类疾病帮手.com" /> -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.oaistatic.com/assets/root-inht5vcp.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.oaistatic.com/assets/conversation-small-nranh1cg.css"
+        />
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"
+        ></script>
+    </head>
+    <body>
+        <div class="flex min-h-screen flex-col items-center justify-center">
+            <div class="w-full text-center mb-8">
+                <h1 class="text-4xl font-bold" id="title">
+                    有什么可以帮忙的？
+                </h1>
+            </div>
+            <div class="w-full px-4 max-w-3xl">
+                <div class="flex justify-center"></div>
+                <form
+                    id="myform"
+                    action="/submit"
+                    method="POST"
+                    class="w-full"
+                    type="button"
+                    aria-haspopup="dialog"
+                    aria-expanded="false"
+                    aria-controls="radix-:R7jkkuiiklj5:"
+                    data-state="closed"
+                >
+                    <div
+                        class="relative flex h-full max-w-full flex-1 flex-col"
+                    >
+                        <div class="group relative flex w-full items-center">
+                            <div class="w-full">
+                                <div
+                                    id="composer-background"
+                                    class="flex w-full cursor-text flex-col rounded-3xl px-2.5 py-1 transition-colors contain-inline-size bg-[#f4f4f4] dark:bg-token-main-surface-secondary"
+                                    style="
+                                        view-transition-name: var(
+                                            --vt-composer
+                                        );
+                                    "
+                                >
+                                    <div
+                                        class="flex min-h-[44px] items-start pl-2"
+                                    >
+                                        <div class="min-w-0 max-w-full flex-1">
+                                            <div
+                                                class="text-token-text-primary max-h-[25dvh] max-h-52 overflow-auto"
+                                            >
+                                                <textarea
+                                                    class="block h-10 w-full resize-none border-0 bg-transparent px-0 py-2 text-token-text-primary"
+                                                    placeholder="你有什么症状"
+                                                    id="data"
+                                                    autofocus
+                                                ></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="w-[32px] pt-1"></div>
+                                    </div>
+                                    <div
+                                        class="flex h-[44px] items-center justify-between"
+                                    >
+                                        <div
+                                            class="flex gap-x-1 text-token-text-primary"
+                                        >
+                                            <div
+                                                style="
+                                                    view-transition-name: var(
+                                                        --vt-composer-attach-file-action
+                                                    );
+                                                "
+                                            >
+                                                <div class="relative">
+                                                    <div class="relative">
+                                                        <div
+                                                            class="flex flex-col"
+                                                        >
+                                                            <input
+                                                                multiple=""
+                                                                tabindex="-1"
+                                                                class="hidden"
+                                                                type="file"
+                                                                style="
+                                                                    display: none;
+                                                                "
+                                                                type="text"
+                                                                name="data"
+                                                                id="data"
+                                                            /><span
+                                                                class="hidden"
+                                                            ></span
+                                                            ><button
+                                                                type="button"
+                                                                id="radix-:rv:"
+                                                                aria-haspopup="menu"
+                                                                aria-expanded="false"
+                                                                data-state="closed"
+                                                                class="text-token-text-primary border border-transparent inline-flex items-center justify-center gap-1 rounded-lg text-sm dark:transparent dark:bg-transparent leading-none outline-none cursor-pointer hover:bg-token-main-surface-secondary dark:hover:bg-token-main-surface-secondary focus-visible:bg-token-main-surface-secondary radix-state-active:text-token-text-secondary radix-disabled:cursor-auto radix-disabled:bg-transparent radix-disabled:text-token-text-tertiary dark:radix-disabled:bg-transparent m-0 h-0 w-0 border-none bg-transparent p-0"
+                                                            ></button
+                                                            ><span
+                                                                class="flex"
+                                                                data-state="closed"
+                                                                ><button
+                                                                    type="button"
+                                                                    aria-disabled="false"
+                                                                    aria-label="附加文件"
+                                                                    class="flex items-center justify-center h-8 w-8 rounded-lg rounded-bl-xl text-token-text-primary dark:text-white focus-visible:outline-black dark:focus-visible:outline-white hover:bg-black/10"
+                                                                >
+                                                                    <svg
+                                                                        width="24"
+                                                                        height="24"
+                                                                        viewBox="0 0 24 24"
+                                                                        fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                    >
+                                                                        <path
+                                                                            fill-rule="evenodd"
+                                                                            clip-rule="evenodd"
+                                                                            d="M9 7C9 4.23858 11.2386 2 14 2C16.7614 2 19 4.23858 19 7V15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9C5 8.44772 5.44772 8 6 8C6.55228 8 7 8.44772 7 9V15C7 17.7614 9.23858 20 12 20C14.7614 20 17 17.7614 17 15V7C17 5.34315 15.6569 4 14 4C12.3431 4 11 5.34315 11 7V15C11 15.5523 11.4477 16 12 16C12.5523 16 13 15.5523 13 15V9C13 8.44772 13.4477 8 14 8C14.5523 8 15 8.44772 15 9V15C15 16.6569 13.6569 18 12 18C10.3431 18 9 16.6569 9 15V7Z"
+                                                                            fill="currentColor"
+                                                                        ></path>
+                                                                    </svg></button
+                                                            ></span>
+                                                            <div
+                                                                type="button"
+                                                                aria-haspopup="dialog"
+                                                                aria-expanded="false"
+                                                                aria-controls="radix-:r12:"
+                                                                data-state="closed"
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="
+                                                    view-transition-name: var(
+                                                        --vt-composer-search-action
+                                                    );
+                                                "
+                                            >
+                                                <div>
+                                                    <span
+                                                        class=""
+                                                        data-state="closed"
+                                                        ><button
+                                                            class="flex h-8 min-w-8 items-center justify-center rounded-lg p-1 text-xs font-semibold hover:bg-black/10 focus-visible:outline-black dark:focus-visible:outline-white"
+                                                            aria-pressed="false"
+                                                            type="button"
+                                                            aria-label="搜索网页"
+                                                        >
+                                                            <svg
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM11.9851 4.00291C11.9933 4.00046 11.9982 4.00006 11.9996 4C12.001 4.00006 12.0067 4.00046 12.0149 4.00291C12.0256 4.00615 12.047 4.01416 12.079 4.03356C12.2092 4.11248 12.4258 4.32444 12.675 4.77696C12.9161 5.21453 13.1479 5.8046 13.3486 6.53263C13.6852 7.75315 13.9156 9.29169 13.981 11H10.019C10.0844 9.29169 10.3148 7.75315 10.6514 6.53263C10.8521 5.8046 11.0839 5.21453 11.325 4.77696C11.5742 4.32444 11.7908 4.11248 11.921 4.03356C11.953 4.01416 11.9744 4.00615 11.9851 4.00291ZM8.01766 11C8.08396 9.13314 8.33431 7.41167 8.72334 6.00094C8.87366 5.45584 9.04762 4.94639 9.24523 4.48694C6.48462 5.49946 4.43722 7.9901 4.06189 11H8.01766ZM4.06189 13H8.01766C8.09487 15.1737 8.42177 17.1555 8.93 18.6802C9.02641 18.9694 9.13134 19.2483 9.24522 19.5131C6.48461 18.5005 4.43722 16.0099 4.06189 13ZM10.019 13H13.981C13.9045 14.9972 13.6027 16.7574 13.1726 18.0477C12.9206 18.8038 12.6425 19.3436 12.3823 19.6737C12.2545 19.8359 12.1506 19.9225 12.0814 19.9649C12.0485 19.9852 12.0264 19.9935 12.0153 19.9969C12.0049 20.0001 11.9999 20 11.9999 20C11.9999 20 11.9948 20 11.9847 19.9969C11.9736 19.9935 11.9515 19.9852 11.9186 19.9649C11.8494 19.9225 11.7455 19.8359 11.6177 19.6737C11.3575 19.3436 11.0794 18.8038 10.8274 18.0477C10.3973 16.7574 10.0955 14.9972 10.019 13ZM15.9823 13C15.9051 15.1737 15.5782 17.1555 15.07 18.6802C14.9736 18.9694 14.8687 19.2483 14.7548 19.5131C17.5154 18.5005 19.5628 16.0099 19.9381 13H15.9823ZM19.9381 11C19.5628 7.99009 17.5154 5.49946 14.7548 4.48694C14.9524 4.94639 15.1263 5.45584 15.2767 6.00094C15.6657 7.41167 15.916 9.13314 15.9823 11H19.9381Z"
+                                                                    fill="currentColor"
+                                                                ></path>
+                                                            </svg></button
+                                                    ></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-x-1">
+                                            <button
+                                                type="submit"
+                                                aria-label="发送提示"
+                                                data-testid="send-button"
+                                                id="submit-button"
+                                                disabled
+                                                class="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:opacity-70 focus-visible:outline-none focus-visible:outline-black disabled:text-[#f4f4f4] disabled:hover:opacity-100 dark:focus-visible:outline-white disabled:dark:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary bg-black text-white dark:bg-white dark:text-black disabled:bg-[#D7D7D7]"
+                                            >
+                                                <script>
+                                                    let isProcessing = false;
+                                                    const submitButton =
+                                                        document.getElementById(
+                                                            "submit-button"
+                                                        );
+                                                    const textareax =
+                                                        document.getElementById(
+                                                            "data"
+                                                        );
+
+                                                    // 监听输入框变化
+                                                    textareax.addEventListener(
+                                                        "input",
+                                                        function () {
+                                                            // 根据输入内容和处理状态更新按钮状态
+                                                            submitButton.disabled =
+                                                                this.value.trim() ===
+                                                                    "" ||
+                                                                isProcessing;
+
+                                                            // 自动调整高度
+                                                            this.style.height =
+                                                                "auto";
+                                                            this.style.height =
+                                                                this
+                                                                    .scrollHeight +
+                                                                "px";
+                                                        }
+                                                    );
+
+                                                    document
+                                                        .getElementById(
+                                                            "myform"
+                                                        )
+                                                        .addEventListener(
+                                                            "submit",
+                                                            function (event) {
+                                                                event.preventDefault();
+
+                                                                if (
+                                                                    isProcessing
+                                                                )
+                                                                    return;
+
+                                                                // 清除之前的结果内容
+                                                                const title =
+                                                                    document.getElementById(
+                                                                        "title"
+                                                                    );
+                                                                // 删除title后面的所有同级元素
+                                                                while (
+                                                                    title.nextElementSibling
+                                                                ) {
+                                                                    title.nextElementSibling.remove();
+                                                                }
+
+                                                                var data =
+                                                                    document.getElementById(
+                                                                        "data"
+                                                                    ).value;
+                                                                if (
+                                                                    !data.trim()
+                                                                )
+                                                                    return;
+
+                                                                isProcessing = true;
+                                                                submitButton.disabled = true;
+
+                                                                // 添加思考动画
+                                                                let dots = 0;
+                                                                const thinkingInterval =
+                                                                    setInterval(
+                                                                        () => {
+                                                                            dots =
+                                                                                (dots +
+                                                                                    1) %
+                                                                                4;
+                                                                            document.getElementById(
+                                                                                "title"
+                                                                            ).textContent =
+                                                                                "思考中" +
+                                                                                ".".repeat(
+                                                                                    dots
+                                                                                );
+                                                                        },
+                                                                        500
+                                                                    );
+                                                                //// 使用 fetch API 流式接收 JSON 数据
+                                                                async function fetchStream() {
+                                                                    const response =
+                                                                        await fetch(
+                                                                            "/submit",
+                                                                            {
+                                                                                method: "POST",
+                                                                                body: JSON.stringify(
+                                                                                    {
+                                                                                        data: data,
+                                                                                    }
+                                                                                ),
+                                                                                headers:
+                                                                                    {
+                                                                                        "Content-Type":
+                                                                                            "application/json",
+                                                                                    },
+                                                                            }
+                                                                        );
+                                                                    const reader =
+                                                                        response.body.getReader();
+                                                                    const decoder =
+                                                                        new TextDecoder();
+                                                                    while (
+                                                                        true
+                                                                    ) {
+                                                                        const {
+                                                                            done,
+                                                                            value,
+                                                                        } =
+                                                                            await reader.read();
+                                                                        if (
+                                                                            done
+                                                                        ) {
+                                                                            // clearInterval(thinkingInterval);
+                                                                            break;
+                                                                        }
+                                                                        // 解码并解析 JSON 数据
+                                                                        const chunk =
+                                                                            decoder.decode(
+                                                                                value
+                                                                            );
+                                                                        console.log(
+                                                                            chunk
+                                                                        );
+                                                                        const data =
+                                                                            JSON.parse(
+                                                                                chunk
+                                                                            );
+                                                                        const title =
+                                                                            document.getElementById(
+                                                                                "title"
+                                                                            );
+
+                                                                        if (
+                                                                            data.stream
+                                                                        ) {
+                                                                            // 创建或更新subtitle
+                                                                            let subtitle =
+                                                                                document.getElementById(
+                                                                                    "subtitle"
+                                                                                );
+                                                                            if (
+                                                                                !subtitle
+                                                                            ) {
+                                                                                subtitle =
+                                                                                    document.createElement(
+                                                                                        "h2"
+                                                                                    );
+                                                                                subtitle.id =
+                                                                                    "subtitle";
+                                                                                subtitle.className =
+                                                                                    "text-xl mt-4";
+                                                                                title.parentNode.insertBefore(
+                                                                                    subtitle,
+                                                                                    title.nextSibling
+                                                                                );
+                                                                            }
+                                                                            subtitle.textContent =
+                                                                                data.stream;
+                                                                            continue;
+                                                                        }
+                                                                        clearInterval(
+                                                                            thinkingInterval
+                                                                        );
+                                                                        title.textContent =
+                                                                            "诊断结果";
+                                                                        if (
+                                                                            data.error
+                                                                        ) {
+                                                                            title.textContent =
+                                                                                data.error;
+                                                                            return;
+                                                                        }
+
+                                                                        // 创建一个新的div来容纳表格
+                                                                        const tableContainer =
+                                                                            document.createElement(
+                                                                                "div"
+                                                                            );
+                                                                        let tableHTML = `
+                                  <div style="padding: 0 20px;">
+                                    <table style="width:100%; border-collapse: collapse; margin-top: 20px;">
+                                      <tr style="background-color: #f4f4f4;">
+                                        <th style="padding: 10px; border: 1px solid #ddd; text-align: center;">疾病名称</th>
+                                        <th style="padding: 10px; border: 1px solid #ddd; text-align: center;">可能性</th>
+                                      </tr>
+                                `;
+
+                                                                        // 遍历JSON数据添加到表格中
+                                                                        for (let [
+                                                                            disease,
+                                                                            confidence,
+                                                                        ] of Object.entries(
+                                                                            data.final_type
+                                                                        )) {
+                                                                            tableHTML += `
+                                    <tr>
+                                      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">${disease}</td>
+                                      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">${(
+                                          confidence * 1
+                                      ).toFixed(0)}%</td>
+                                    </tr>
+                                  `;
+                                                                        }
+                                                                        tableHTML +=
+                                                                            "</table></div>";
+
+                                                                        // 添加危险度进度条
+                                                                        tableHTML += `
+                                  <div style="padding: 20px; margin-top: 20px;">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                      <span style="min-width: 70px;">准确度(细节提供越多越准)</span>
+                                      <div style="flex-grow: 1; background-color: #f0f0f0; height: 20px; border-radius: 10px; overflow: hidden;">
+                                        <div style="width: ${
+                                            data.danger
+                                        }%; height: 100%; background-color: ${
+                                                                            data.danger <
+                                                                            30
+                                                                                ? "#ff4d4d"
+                                                                                : data.danger <
+                                                                                  60
+                                                                                ? "#ffa500"
+                                                                                : "#4CAF50"
+                                                                        }; transition: width 0.5s ease;"></div>
+                                      </div>
+                                      <span>${data.danger}%</span>
+                                    </div>
+                                  </div>
+                                `;
+
+                                                                        // 添加治疗方案的动画显示
+                                                                        tableHTML += `
+                                  <div style="padding: 20px; margin-top: 10px;">
+                                    <div id="solution" style="font-size: 14px; line-height: 1.5; color: #666;">
+                                    </div>
+                                  </div>
+                                `;
+
+                                                                        // 设置表格HTML
+                                                                        tableContainer.innerHTML =
+                                                                            tableHTML;
+
+                                                                        // 将表格添加到title元素后面
+                                                                        title.parentNode.insertBefore(
+                                                                            tableContainer,
+                                                                            title.nextSibling
+                                                                        );
+
+                                                                        // 在表格添加到DOM后，开始动画显示治疗方案
+                                                                        const solution =
+                                                                            data.solution;
+                                                                        const solutionElement =
+                                                                            tableContainer.querySelector(
+                                                                                "#solution"
+                                                                            );
+                                                                        let index = 0;
+
+                                                                        function typeWriter() {
+                                                                            if (
+                                                                                index <
+                                                                                solution.length
+                                                                            ) {
+                                                                                solutionElement.textContent +=
+                                                                                    solution.charAt(
+                                                                                        index
+                                                                                    );
+                                                                                index++;
+                                                                                setTimeout(
+                                                                                    typeWriter,
+                                                                                    50
+                                                                                ); // 每50毫秒显示一个字
+                                                                            } else {
+                                                                                // 打字动画结束后，添加并初始化词云图
+                                                                                const wordCloudContainer =
+                                                                                    document.createElement(
+                                                                                        "div"
+                                                                                    );
+                                                                                wordCloudContainer.id =
+                                                                                    "wordCloudChart";
+                                                                                wordCloudContainer.style.width =
+                                                                                    "100%";
+                                                                                wordCloudContainer.style.height =
+                                                                                    "150px";
+                                                                                wordCloudContainer.style.marginTop =
+                                                                                    "20px";
+                                                                                tableContainer.appendChild(
+                                                                                    wordCloudContainer
+                                                                                );
+
+                                                                                // 初始化词云图表
+                                                                                var myChart =
+                                                                                    echarts.init(
+                                                                                        document.getElementById(
+                                                                                            "wordCloudChart"
+                                                                                        )
+                                                                                    );
+
+                                                                                // 词云图配置
+                                                                                myChart.setOption(
+                                                                                    {
+                                                                                        backgroundColor:
+                                                                                            "#fff",
+                                                                                        tooltip:
+                                                                                            {
+                                                                                                show: false,
+                                                                                            },
+                                                                                        series: [
+                                                                                            {
+                                                                                                type: "wordCloud",
+                                                                                                gridSize: 1,
+                                                                                                sizeRange:
+                                                                                                    [
+                                                                                                        12,
+                                                                                                        55,
+                                                                                                    ],
+                                                                                                rotationRange:
+                                                                                                    [
+                                                                                                        -45,
+                                                                                                        0,
+                                                                                                        45,
+                                                                                                        90,
+                                                                                                    ],
+                                                                                                textStyle:
+                                                                                                    {
+                                                                                                        normal: {
+                                                                                                            color: function () {
+                                                                                                                return (
+                                                                                                                    "rgb(" +
+                                                                                                                    Math.round(
+                                                                                                                        Math.random() *
+                                                                                                                            255
+                                                                                                                    ) +
+                                                                                                                    ", " +
+                                                                                                                    Math.round(
+                                                                                                                        Math.random() *
+                                                                                                                            255
+                                                                                                                    ) +
+                                                                                                                    ", " +
+                                                                                                                    Math.round(
+                                                                                                                        Math.random() *
+                                                                                                                            255
+                                                                                                                    ) +
+                                                                                                                    ")"
+                                                                                                                );
+                                                                                                            },
+                                                                                                        },
+                                                                                                    },
+                                                                                                left: "center",
+                                                                                                top: "center",
+                                                                                                right: null,
+                                                                                                bottom: null,
+                                                                                                data: Object.entries(
+                                                                                                    data.cloud
+                                                                                                ).map(
+                                                                                                    ([
+                                                                                                        name,
+                                                                                                        value,
+                                                                                                    ]) => ({
+                                                                                                        name: name,
+                                                                                                        value: value,
+                                                                                                    })
+                                                                                                ),
+                                                                                            },
+                                                                                        ],
+                                                                                    }
+                                                                                );
+                                                                            }
+                                                                        }
+
+                                                                        typeWriter(); // 开始打字动画
+                                                                        isProcessing = false;
+                                                                        submitButton.disabled =
+                                                                            textareax.value.trim() ===
+                                                                            "";
+                                                                    }
+                                                                }
+                                                                fetchStream();
+                                                            }
+                                                        );
+                                                </script>
+                                                <svg
+                                                    width="32"
+                                                    height="32"
+                                                    viewBox="0 0 32 32"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon-2xl"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M15.1918 8.90615C15.6381 8.45983 16.3618 8.45983 16.8081 8.90615L21.9509 14.049C22.3972 14.4953 22.3972 15.2189 21.9509 15.6652C21.5046 16.1116 20.781 16.1116 20.3347 15.6652L17.1428 12.4734V22.2857C17.1428 22.9169 16.6311 23.4286 15.9999 23.4286C15.3688 23.4286 14.8571 22.9169 14.8571 22.2857V12.4734L11.6652 15.6652C11.2189 16.1116 10.4953 16.1116 10.049 15.6652C9.60265 15.2189 9.60265 14.4953 10.049 14.049L15.1918 8.90615Z"
+                                                        fill="currentColor"
+                                                    ></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <div id="qk-ext-root" class="wSsllC9wCXlJ1wygj1YQ"></div>
+</html>
+
+<script>
+    // 添加自动调整高度的功能
+    const textareat = document.getElementById("data");
+    textareat.addEventListener("input", function () {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    });
+</script>
